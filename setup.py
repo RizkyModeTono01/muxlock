@@ -68,13 +68,13 @@ def setlock():
         time.sleep(2)
         setlock()
     data='''
-figlet MuxLock
+figlet RBKC-Team
 loop=true
 
 while $loop; do
-	echo -e "\e[1;;34mEnter the username:\e[0m"
+	echo -e "\e[1;;34mMasukan Nama:\e[0m"
 	read usr
-	echo -e "\e[1;;37mEnter the password:\e[0m"
+	echo -e "\e[1;;37mMasukan Password:\e[0m"
 	read pwd
 	if [[ ($usr == "'''+x+'''" && $pwd == "'''+y+'''") ]]; then
 	echo -e "\e[1;;46mLogin Berhasil!\e[0m"
