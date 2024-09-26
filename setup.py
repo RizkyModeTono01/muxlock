@@ -13,13 +13,13 @@ success = green + '[' + white + '√' + green + '] '
 error = red + '[' + white + '!' + red + '] '
 info= yellow + '[' + white + '+' + yellow + '] '+ cyan
 logo='''
-'''+green+'''  __  __            _                _    
-'''+red+''' |  \/  |          | |              | |   
-'''+cyan+''' | \  / |_   ___  __ |     ___   ___| | __
-'''+yellow+''' | |\/| | | | \ \/ / |    / _ \ / __| |/ /
-'''+blue+''' | |  | | |_| |>  <| |____ (_) | (__|   < 
-'''+purple+''' |_|  |_|\__,_/_/\_\______\___/ \___|_|\_\
-'''+green+'''                                          
+'''+green+'''  Hai Tuan RyMoon, Selamat datang
+'''+red+''' 
+'''+cyan+''' 
+'''+yellow+''' 
+'''+blue+'''
+'''+purple+''' 
+'''+green+'''  Silahkan Masukan Password      
 '''
 def main():
     print(yellow+'''Choose one of the following options below!
@@ -57,12 +57,12 @@ def setlock():
         os.system("apt update && apt upgrade -y && apt install figlet -y")
     os.system("clear")
     print(logo)
-    x=input("\n"+ask+"Enter your username > "+green)
+    x=input("\n"+ask+"Masukan Nama Anda > "+green)
     if x=="":
         print(error+"No name")
         time.sleep(2)
         setlock()
-    y=input("\n"+ask+"Enter your password > "+green)
+    y=input("\n"+ask+"Masukan Password Anda > "+green)
     if y=="":
         print(error+"No Password")
         time.sleep(2)
@@ -77,14 +77,14 @@ while $loop; do
 	echo -e "\e[1;;37mEnter the password:\e[0m"
 	read pwd
 	if [[ ($usr == "'''+x+'''" && $pwd == "'''+y+'''") ]]; then
-	echo -e "\e[1;;46mLogin successful!\e[0m"
+	echo -e "\e[1;;46mLogin Berhasil!\e[0m"
 	sleep 1
 	loop=false
 	elif [[ ($usr == "forgotten" && $pwd == "forgotten") ]]; then
 	bash ~/../usr/etc/forgotten.sh
 	loop=false
 	else
-	echo -e "\e[1;;45mWrong username or password!\e[0m"
+	echo -e "\e[1;;45mSalah!!!!\e[0m"
 	fi
 	done
 clear
